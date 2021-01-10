@@ -204,7 +204,7 @@
 ;;
 
 (define (filter sequence pred)
-  (if ((null? sequence) '())
+  (if (null? sequence) '()
       (let ((filter-of-rest (filter (cdr sequence) pred)))
 	(if (pred (car sequence))
 	    (cons (car sequence) filter-of-rest)
